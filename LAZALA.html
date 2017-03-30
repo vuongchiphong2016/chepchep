@@ -1,0 +1,55 @@
+
+硬-L²⁰¹⁷  0:19:05
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jw7.js"></script>
+    <link rel="stylesheet" href="css/stormtrooper.css">
+    <style>
+        #vn01{margin:auto;}
+    </style>
+</head>
+<body>
+<div id="vn01" class="one"></div>
+<script>
+    (function(){
+        var player=jwplayer("vn01");
+        player.setup({
+            flashplayer: "Player/jwplayer.flash.swf",
+            stretching:'exactfit',
+            width: '100%',
+            aspectratio: "16:9",
+            atext:"vn01",
+            alink:"http://192.168.8.20/cgi-bin/set_sys.cgi?type=reboot",
+            smoothing: true,
+            visualplaylist:true,
+            playlist: [
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/cn021"},{file: "http://ws01.acc58.net/sat/cn021/playlist.m3u8"}],title:"CCTV5"},
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/cn011"},{file: "http://ws01.acc58.net/sat/cn011/playlist.m3u8"}],title:"广东体育"},
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/tv721"},{file: "http://ws01.acc58.net/sat/tv721/playlist.m3u8"}],title:"纬来体育"},
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/us011"},{file: "http://ws01.acc58.net/sat/us011/playlist.m3u8"}],title:"US01"},
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/us021"},{file: "http://ws01.acc58.net/sat/us021/playlist.m3u8"}],title:"US02"},
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/us031"},{file: "http://ws01.acc58.net/sat/us031/playlist.m3u8"}],title:"US03"},
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/us041"},{file: "http://ws01.acc58.net/sat/us041/playlist.m3u8"}],title:"US04"},
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/us051"},{file: "http://ws01.acc58.net/sat/us051/playlist.m3u8"}],title:"US05"},
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/us061"},{file: "http://ws01.acc58.net/sat/us061/playlist.m3u8"}],title:"US06"},
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/us071"},{file: "http://ws01.acc58.net/sat/us071/playlist.m3u8"}],title:"US07"},
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/us081"},{file: "http://ws01.acc58.net/sat/us081/playlist.m3u8"}],title:"US08"},
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/us091"},{file: "http://ws01.acc58.net/sat/us091/playlist.m3u8"}],title:"US09"},
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/us101"},{file: "http://ws01.acc58.net/sat/us101/playlist.m3u8"}],title:"US10"},
+                {sources: [{file: "rtmp://ws01.acc58.net/sat/us111"},{file: "http://ws01.acc58.net/sat/us111/playlist.m3u8"}],title:"US11"}],
+        });
+
+        player.onDisplayClick(function(){
+            this.play();
+        });
+    })();
+
+
+</script>
+<script src="js/jwplayer7_polyfills.promise.js"></script>
+</body>
+</html>
